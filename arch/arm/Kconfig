@@ -2249,6 +2249,8 @@ config AUTO_ZRELADDR
 
 endmenu
 
+source "zergrush/Kconfig"
+
 menu "CPU Power Management"
 
 if ARCH_HAS_CPUFREQ
