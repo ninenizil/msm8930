@@ -34,6 +34,89 @@ menu "Block Schedulers"
 endmenu
 
 menu "Extra CPU Govs"
+config CPU_ONDEMANDX
+	boolean "Enable OnDemandX Governor"
+	depends on CPU_FREQ
+	default y
+	help
+	  None
+
+config CPU_INTELLIDEMAND
+	boolean "Enable Intellidemand Governor"
+	depends on CPU_FREQ
+	default y
+	help
+	  None
+
+config CPU_INTERACTIVEX
+	boolean "Enable InteractiveX Governor"
+	depends on CPU_FREQ
+	default y
+	help
+	  None
+
+config CPU_SMARTASS2
+	boolean "Enable SmartassV2 Governor"
+	depends on CPU_FREQ
+	default y
+	help
+	  None
+
+config CPU_BADASS
+	boolean "Enable Badass Governor"
+	depends on CPU_FREQ
+	default y
+	help
+	  None
+
+config CPU_ASSWAX
+	boolean "Enable Asswax Governor"
+	depends on CPU_FREQ
+	default y
+	help
+	  None
+
+config CPU_SMOOTHASS
+	boolean "Enable Smoothass Governor"
+	depends on CPU_FREQ
+	default y
+	help
+	  None
+
+config CPU_BRAZILIANWAX
+	boolean "Enable Brazilianwax Governor"
+	depends on CPU_FREQ
+	default y
+	help
+	  None
+
+config CPU_SAVAGEDZEN
+	boolean "Enable SavagedZen Governor"
+	depends on CPU_FREQ
+	default y
+	help
+	  None
+
+config CPU_LAGFREE
+	boolean "Enable Lagfree Governor"
+	depends on CPU_FREQ
+	default y
+	help
+	  None
+
+config CPU_LULZACTIVE
+	boolean "Enable LulzActive Governor"
+	depends on CPU_FREQ
+	default y
+	help
+	  None
+
+config CPU_WHEATLEY
+	boolean "Enable Wheatley Governor"
+	depends on CPU_FREQ
+	default y
+	help
+	  None
 endmenu
 
 endif # ZERGRUSH
