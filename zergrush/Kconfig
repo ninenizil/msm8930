@@ -13,16 +13,16 @@ config CPU_OVERCLOCK_15_GHZ
 	help
 	  Overclock for MSM8930 chipset. (Based on MSM8960 acpuclock table)
 
-config CPU_OVERCLOCK_19_GHZ
-	boolean "Overclocking to 1.9GHz"
+config CPU_OVERCLOCK_17_GHZ
+	boolean "Overclocking to 1.7GHz"
 	depends on CPU_OVERCLOCK_15_GHZ
 	default y
 	help
 	  Overclock for MSM8930 chipset. (Based on MSM8960 acpuclock table)
 
-config CPU_OVERCLOCK_21_GHZ
-	boolean "Overclocking to 2.1GHz"
-	depends on CPU_OVERCLOCK_19_GHZ
+config CPU_OVERCLOCK_18_GHZ
+	boolean "Overclocking to 1.8GHz"
+	depends on CPU_OVERCLOCK_17_GHZ
 	default n
 	help
 	  Overclock for MSM8930 chipset. (Based on MSM8960 acpuclock table)

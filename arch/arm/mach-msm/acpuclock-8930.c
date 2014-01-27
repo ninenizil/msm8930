@@ -123,8 +123,8 @@ static struct msm_bus_paths bw_level_tbl[] __initdata = {
 	[5] = BW_MBPS(3600), /* At least 450 MHz on bus. */
 	[6] = BW_MBPS(3936), /* At least 492 MHz on bus. */
 	[7] = BW_MBPS(4264), /* At least 533 MHz on bus. */
-#ifdef CONFIG_CPU_OVERCLOCK_19_GHZ
-	[8] = BW_MBPS(4800), /* At least 533 MHz on bus. */
+#ifdef CONFIG_CPU_OVERCLOCK_18_GHZ
+	[8] = BW_MBPS(4800), /* At least 600 MHz on bus. */
 #endif
 };
 
@@ -157,11 +157,11 @@ static struct l2_level l2_freq_tbl[] __initdata = {
 	[17] = { { 1296000, HFPLL, 1, 0x30 }, LVL_HIGH, 1150000, 7 },
 	[18] = { { 1350000, HFPLL, 1, 0x32 }, LVL_HIGH, 1150000, 7 },
 #endif
-#ifdef CONFIG_CPU_OVERCLOCK_19_GHZ
+#ifdef CONFIG_CPU_OVERCLOCK_17_GHZ
 	[19] = { { 1404000, HFPLL, 1, 0x34 }, LVL_HIGH, 1150000, 7 },
 	[20] = { { 1458000, HFPLL, 1, 0x34 }, LVL_HIGH, 1150000, 7 },
 #endif
-#ifdef CONFIG_CPU_OVERCLOCK_20_GHZ
+#ifdef CONFIG_CPU_OVERCLOCK_18_GHZ
 	[21] = { { 1512000, HFPLL, 1, 0x34 }, LVL_HIGH, 1150000, 8 },
 #endif
 	{ }
@@ -199,12 +199,12 @@ static struct acpu_level acpu_freq_tbl_slow[] __initdata = {
 	{ 1, {  1404000, HFPLL, 1, 0x34 }, L2(18), 1232500 },
 	{ 1, {  1512000, HFPLL, 1, 0x38 }, L2(18), 1232500 },
 #endif 
-#ifdef CONFIG_CPU_OVERCLOCK_19_GHZ
+#ifdef CONFIG_CPU_OVERCLOCK_17_GHZ
         { 1, {  1674000, HFPLL, 1, 0x3C }, L2(18), 1250000 },
         { 1, {  1728000, HFPLL, 1, 0x40 }, L2(20), 1250000 },
         { 1, {  1782000, HFPLL, 1, 0x42 }, L2(20), 1262500 },
 #endif 
-#ifdef CONFIG_CPU_OVERCLOCK_20_GHZ
+#ifdef CONFIG_CPU_OVERCLOCK_18_GHZ
 	{ 1, {  1836000, HFPLL, 1, 0x44 }, L2(21), 1262500 },
 #endif
 	{ 0, { 0 } }
@@ -242,12 +242,12 @@ static struct acpu_level acpu_freq_tbl_nom[] __initdata = {
 	{ 1, {  1404000, HFPLL, 1, 0x34 }, L2(18), 1225000 },
 	{ 1, {  1512000, HFPLL, 1, 0x38 }, L2(18), 1225000 },
 #endif 
-#ifdef CONFIG_CPU_OVERCLOCK_19_GHZ
+#ifdef CONFIG_CPU_OVERCLOCK_17_GHZ
         { 1, {  1674000, HFPLL, 1, 0x3C }, L2(18), 1225000 },
         { 1, {  1728000, HFPLL, 1, 0x40 }, L2(20), 1250000 },
         { 1, {  1782000, HFPLL, 1, 0x42 }, L2(20), 1250000 },
 #endif 
-#ifdef CONFIG_CPU_OVERCLOCK_20_GHZ
+#ifdef CONFIG_CPU_OVERCLOCK_18_GHZ
 	{ 1, {  1836000, HFPLL, 1, 0x44 }, L2(21), 1250000 },
 #endif
 	{ 0, { 0 } }
@@ -286,12 +286,12 @@ static struct acpu_level acpu_freq_tbl_fast[] __initdata = {
 	{ 1, {  1404000, HFPLL, 1, 0x34 }, L2(18), 1175000 },
 	{ 1, {  1512000, HFPLL, 1, 0x38 }, L2(18), 1175000 },
 #endif 
-#ifdef CONFIG_CPU_OVERCLOCK_19_GHZ
+#ifdef CONFIG_CPU_OVERCLOCK_17_GHZ
         { 1, {  1674000, HFPLL, 1, 0x3C }, L2(18), 1225000 },
-        { 1, {  1728000, HFPLL, 1, 0x40 }, L2(21), 1250000 },
-        { 1, {  1782000, HFPLL, 1, 0x42 }, L2(21), 1250000 },
+        { 1, {  1728000, HFPLL, 1, 0x40 }, L2(20), 1250000 },
+        { 1, {  1782000, HFPLL, 1, 0x42 }, L2(20), 1250000 },
 #endif 
-#ifdef CONFIG_CPU_OVERCLOCK_21_GHZ
+#ifdef CONFIG_CPU_OVERCLOCK_18_GHZ
 	{ 1, {  1836000, HFPLL, 1, 0x44 }, L2(21), 1250000 },
 #endif 
 	{ 0, { 0 } }
@@ -337,3 +337,5 @@ static int __init acpuclk_8930_init(void)
 				     acpuclk_8930_probe);
 }
 device_initcall(acpuclk_8930_init);
+
+
