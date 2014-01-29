@@ -1,3 +1,4 @@
+EXTRA_CFLAGS=-w
 #
 # Makefile for Linux CIFS VFS client 
 #
