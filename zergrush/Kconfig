@@ -176,4 +176,11 @@ source "drivers/staging/prima/Kconfig"
 
 endmenu
 
+menu "Filesystems"
+
+source "fs/exfat/Kconfig"
+source "fs/f2fs/Kconfig"
+
+endmenu
+
 endif # ZERGRUSH
