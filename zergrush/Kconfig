@@ -169,4 +169,11 @@ config CPU_WHEATLEY
 	  None
 endmenu
 
+
+menu "Wireless"
+
+source "drivers/staging/prima/Kconfig"
+
+endmenu
+
 endif # ZERGRUSH
